@@ -18,13 +18,13 @@
   <!-- Main rotor-->
  <animation>
     <type>spin</type>
-<object-name>MainRotor</object-name>
+<object-name>Main Rotor</object-name>
  <property>rotors/main/rpm</property>
     <factor> 5 </factor>
     <center>
-      <x-m> 0.21367 </x-m>
+      <x-m> 0.06955 </x-m>
       <y-m> 0.0 </y-m>
-      <z-m>  1.72308 </z-m>
+      <z-m>  1.72433 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -35,13 +35,13 @@
  <!-- Tail Rotor -->
 <animation>
     <type>spin</type>
-<object-name>SideRotor</object-name>
+<object-name>Side Rotor</object-name>
  <property>rotors/main/rpm</property>
     <factor> 1 </factor>
     <center>
-      <x-m> 2.33154 </x-m>
-      <y-m> 1.01669 </y-m>
-      <z-m>  0.90273 </z-m>
+      <x-m> 2.15741 </x-m>
+      <y-m> 1.00856 </y-m>
+      <z-m>  1.08068 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -54,6 +54,9 @@
   <type>material</type>
   <object-name>BobcatVolanti-Body</object-name>
   <object-name>D1</object-name>
+<object-name>E1</object-name>
+<object-name>Bonnet</object-name>
+<object-name>Boot</object-name>
   <object-name>frontwheel</object-name>
   <object-name>backwheel</object-name>
   <property-base>sim/model/livery</property-base>
@@ -72,7 +75,7 @@
   <factor>-4</factor>
   <offset-deg>0</offset-deg>
   <center>
-   <x-m> -1.25397 </x-m>
+   <x-m> -1.4046 </x-m>
    <y-m> 0   </y-m>
    <z-m> 0.45077 </z-m>
   </center>
@@ -89,7 +92,7 @@
   <property>gear/gear[0]/rollspeed-ms</property>
   <factor>10</factor>
   <center>
-   <x-m> -1.25397 </x-m>
+   <x-m> -1.4046 </x-m>
    <y-m> 0   </y-m>
    <z-m> 0.45077 </z-m>
   </center>
@@ -106,7 +109,7 @@
   <property>gear/gear[2]/rollspeed-ms</property>
   <factor>5</factor>
   <center>
-   <x-m> 1.72968 </x-m>
+   <x-m> 1.59164 </x-m>
    <y-m> 0   </y-m>
    <z-m> 0.45077 </z-m>
   </center>
@@ -124,9 +127,9 @@
 <factor>80</factor>
   <offset-deg>0</offset-deg>
   <center>
-   <x-m> -0.24409 </x-m>
-   <y-m> -0.32724 </y-m>
-   <z-m> 1.19039 </z-m>
+   <x-m> -0.41463 </x-m>
+   <y-m> -0.42749 </y-m>
+   <z-m> 1.07884 </z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -156,14 +159,14 @@
 </animation>
 <animation>
 <type>pick</type>
-<object-name>D1</object-name>
+<object-name>D2</object-name>
 <visible>true</visible>
 <action>
 <button>0</button>
 <repeatable>false</repeatable>
 <binding>
 <command>nasal</command>
-<script>bulldogrs.door.toggle();</script>
+<script>bulldogrs.fldoor.toggle();</script>
 </binding>
 </action>
 <hovered>
@@ -183,9 +186,9 @@
 <property>sim/multiplay/generic/float[0]</property>
 <factor>-40</factor>
 <center>
-<x-m>-0.66943</x-m>
-<y-m>-1.00213</y-m>
-<z-m>0.82951</z-m>
+<x-m>-0.81355</x-m>
+<y-m>-1.00555</y-m>
+<z-m>0.86423</z-m>
 </center>
 <axis>
 <x>0</x>
@@ -193,6 +196,123 @@
 <z>1</z>
 </axis>
 </animation>
+<animation>
+<type>pick</type>
+<object-name>E2</object-name>
+<visible>true</visible>
+<action>
+<button>0</button>
+<repeatable>false</repeatable>
+<binding>
+<command>nasal</command>
+<script>bulldogrs.frdoor.toggle();</script>
+</binding>
+</action>
+<hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>door</tooltip-id>
+                <label>Door Open/Close</label>
+            </binding>
+        </hovered>
+
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>E1</object-name>
+<object-name>E2</object-name>
+<property>sim/multiplay/generic/float[9]</property>
+<factor>-40</factor>
+<center>
+<x-m>-0.81355</x-m>
+<y-m>0.99649</y-m>
+<z-m>0.86423</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>0</y>
+<z>-1</z>
+</axis>
+</animation>
+<animation>
+<type>pick</type>
+<object-name>Boot</object-name>
+<visible>true</visible>
+<action>
+<button>0</button>
+<repeatable>false</repeatable>
+<binding>
+<command>nasal</command>
+<script>bulldogrs.boot.toggle();</script>
+</binding>
+</action>
+<hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>door</tooltip-id>
+                <label>Boot Open/Close</label>
+            </binding>
+        </hovered>
+
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>Boot</object-name>
+<object-name>BootLogo</object-name>
+<property>sim/multiplay/generic/float[12]</property>
+<factor>-90</factor>
+<center>
+<x-m>2.56406</x-m>
+<y-m>-0.00441</y-m>
+<z-m>0.7592</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>-1</y>
+<z>0</z>
+</axis>
+</animation>
+<animation>
+<type>pick</type>
+<object-name>Bonnet</object-name>
+<visible>true</visible>
+<action>
+<button>0</button>
+<repeatable>false</repeatable>
+<binding>
+<command>nasal</command>
+<script>bulldogrs.bonnet.toggle();</script>
+</binding>
+</action>
+<hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>door</tooltip-id>
+                <label>Bonnet Open/Close</label>
+            </binding>
+        </hovered>
+
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>Bonnet</object-name>
+<property>sim/multiplay/generic/float[13]</property>
+<factor>-40</factor>
+<center>
+<x-m>-0.98945</x-m>
+<y-m>-0.00462</y-m>
+<z-m>1.22505</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>-1</y>
+<z>0</z>
+</axis>
+</animation>
+
 <animation>
  <type>material</type>
  <object-name>Left Indicator</object-name>
@@ -247,13 +367,13 @@
    <object-name>LL</object-name>
    <nopreview/>
    <position>
-     <x>-1.91945</x>
-     <y>-0.75402</y>
-     <z>0.90669</z>
+     <x>-2.06357</x>
+     <y>-0.75744</y>
+     <z>0.9414</z>
    </position>
    <direction>
-     <x>-1.92</x>
-     <y>-0.75402</y>
+     <x>-2.07</x>
+     <y>-0.75744</y>
      <z>-0.1</z>
    </direction>
     <ambient>
@@ -291,13 +411,13 @@
    <object-name>RR</object-name>
    <nopreview/>
       <position>
-     <x>-1.91945</x>
-     <y>0.75402</y>
-     <z>0.90669</z>
+     <x>-2.06357</x>
+     <y>0.75744</y>
+     <z>0.9414</z>
    </position>
    <direction>
-     <x>-1.92</x>
-     <y>0.75402</y>
+     <x>-2.07</x>
+     <y>0.75744</y>
      <z>-0.1</z>
    </direction>
     <ambient>

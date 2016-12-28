@@ -31,9 +31,9 @@
 <view n="0">
 		<internal archive="y">true</internal>
 		<config>
-			<x-offset-m archive="y" type="double">-0.43362</x-offset-m><!--blender y-->
-			<y-offset-m archive="y" type="double">1.45349</y-offset-m><!-- blender z-->
-			<z-offset-m archive="y" type="double">0.25223</z-offset-m><!-- blender x -->
+			<x-offset-m archive="y" type="double">-0.42749</x-offset-m><!--blender y-->
+			<y-offset-m archive="y" type="double">1.52698</y-offset-m><!-- blender z-->
+			<z-offset-m archive="y" type="double">0.16948</z-offset-m><!-- blender x -->
 			<pitch-offset-deg>-10.0</pitch-offset-deg>
 			<field-of-view>65</field-of-view>
 		</config>
@@ -83,7 +83,7 @@
       <text>Shift+B to toggle wheels brakes off and on.  Key } to switch on rotor and { to switch of rotor. Shift+R to toggle rotor brake off and on. Key [ to toggle left indicator and key ] to toggle right indicator.</text>         </help>
 <multiplay>
 	 <generic>
-	 <float n="0" alias="/sim/model/door-positions/door/position-norm" />
+	 <float n="0" alias="/sim/model/door-positions/fldoor/position-norm" />
 <float n="1" alias="/gear/gear[0]/rollspeed-ms"/> <!--wheel rotation-->
 	  <float n="2" alias="/gear/gear[1]/rollspeed-ms"/> <!--wheel rotation-->
 	  <float n="3" alias="/gear/gear[2]/rollspeed-ms"/> <!--wheel rotation-->
@@ -92,6 +92,12 @@
 	<float n="6" alias="/sim/model/lights/indicator-left/state"/>
 	<float n="7" alias="/sim/model/lights/indicator-right/state"/>
 <float n="8" alias="/controls/gear/brake-parking"/>
+<float n="9" alias="/sim/model/door-positions/frdoor/position-norm" />
+<float n="10" alias="/sim/model/door-positions/bldoor/position-norm" />
+<float n="11" alias="/sim/model/door-positions/brdoor/position-norm" />
+<float n="12" alias="/sim/model/door-positions/boot/position-norm" />
+<float n="13" alias="/sim/model/door-positions/bonnet/position-norm" />
+
 </generic>
 	</multiplay>
 <menubar>
