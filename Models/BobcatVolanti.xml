@@ -148,16 +148,6 @@
  </emission>
 </animation>
 <animation>
- <type>material</type>
- <object-name>RotorBrake</object-name>
-<emission>
-  <red>4.0</red>
-  <green>0.0</green>
-  <blue>0.0</blue>
-  <factor-prop>/controls/rotor/brake</factor-prop>
- </emission>
-</animation>
-<animation>
 <type>pick</type>
 <object-name>D2</object-name>
 <visible>true</visible>
@@ -481,6 +471,78 @@
    <max>1.1</max>
   </random>
  </branch-duration-sec>
+</animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>Start</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+  <binding>
+      <command>nasal</command>
+      <script>bulldogrs.Startup()</script>
+    </binding>
+  </action>
+ </animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>Stop</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+  <binding>
+      <command>nasal</command>
+      <script>bulldogrs.Shutdown()</script>
+    </binding>
+  </action>
+ </animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>ParkingBrake</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+  <binding>
+   <command>property-toggle</command>
+    <property>/controls/gear/brake-parking</property>
+    </binding>
+  </action>
+ </animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>RotorBrake</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+  <binding>
+  <command>property-toggle</command>
+    <property>/controls/rotor/brake</property>
+    </binding>
+  </action>
+ </animation>
+<animation>
+ <type>material</type>
+ <object-name>RotorBrake</object-name>
+<emission>
+  <red>2.0</red>
+  <green>2.0</green>
+  <blue>2.0</blue>
+  <factor-prop>/controls/rotor/brake</factor-prop>
+ </emission>
+</animation>
+<animation>
+ <type>material</type>
+ <object-name>ParkingBrake</object-name>
+<emission>
+  <red>2.0</red>
+  <green>2.0</green>
+  <blue>2.0</blue>
+  <factor-prop>/controls/gear/brake-parking</factor-prop>
+ </emission>
 </animation>
 </PropertyList>
  
