@@ -59,6 +59,7 @@
 <object-name>Boot</object-name>
   <object-name>frontwheel</object-name>
   <object-name>backwheel</object-name>
+  <object-name>Steering</object-name>
   <property-base>sim/model/livery</property-base>
   <texture-prop>texture</texture-prop>
   <texture>Liveries/BaseColor.png</texture>
