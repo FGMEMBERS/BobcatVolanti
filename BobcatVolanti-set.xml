@@ -38,6 +38,19 @@
 			<field-of-view>65</field-of-view>
 		</config>
 	</view>
+     <view n="103">
+    <name>Front Passenger View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+    <x-offset-m archive="y" type="double">0.42749</x-offset-m><!--blender y-->
+			<y-offset-m archive="y" type="double">1.52698</y-offset-m><!-- blender z-->
+			<z-offset-m archive="y" type="double">0.16948</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-10.0</pitch-offset-deg>
+   </config>
+  </view>
 
 	<view n="1">
 		<config>
