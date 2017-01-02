@@ -182,13 +182,6 @@
     </main>
   </rotors>
 
-  <instrumentation>
-    <gsdi>
-      <serviceable type="bool">true</serviceable>
-      <enabled type="bool">true</enabled>
-    </gsdi>
-  </instrumentation>
-
   <input>
  <keyboard include="Nasal/bulldogrs-keyboard.xml"/>
   </input>
