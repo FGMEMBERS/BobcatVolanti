@@ -151,18 +151,16 @@
         damp="1.0"
         sfric="1.5"
         dfric="0.8">
-	 <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
-        <control-output control="STEER" prop="controls/gear/steering"/>
-  </gear>
+	 <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.2" dst1="0.2"/>
+   </gear>
 <gear x="3.603" y="-1.043" z="0"  compression="0.1"
         spring="3"
 	on-water="1" on-solid="1"
         damp="1.0"
         sfric="1.5"
         dfric="0.8">
-	 <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
-        <control-output control="STEER" prop="controls/gear/steering"/>
-  </gear>
+	 <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.2" dst1="0.2"/>
+   </gear>
 <gear x="1.465" y="1.043" z="0" compression="0.1"
         spring="3.2"
 	on-water="1" on-solid="1"
@@ -193,7 +191,7 @@
   <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
   <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
   <ballast x="2" y="-1.1" z=" 1.1" mass="50"/>
-<thruster x="1.465" y="0" z="0" vx="1" vy="0" vz="0" thrust="100">
+<thruster x="3.603" y="0" z="0" vx="1" vy="0" vz="0" thrust="50">
   <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
   </thruster>
 </airplane>

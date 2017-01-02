@@ -72,7 +72,7 @@
   <object-name>frontwheel</object-name>
   <object-name>frontwheel2</object-name>
   <type>rotate</type>
-  <property>controls/flight/aileron</property>
+  <property>controls/flight/rudder</property>
   <factor>-4</factor>
   <offset-deg>0</offset-deg>
   <center>
@@ -125,6 +125,24 @@
   <object-name>Steering L1</object-name>
   <type>rotate</type>
   <property>controls/flight/aileron</property>
+<factor>80</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m> -0.41463 </x-m>
+   <y-m> -0.42749 </y-m>
+   <z-m> 1.07884 </z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+<animation>
+  <object-name>Steering</object-name>
+  <object-name>Steering L1</object-name>
+  <type>rotate</type>
+  <property>controls/flight/rudder</property>
 <factor>80</factor>
   <offset-deg>0</offset-deg>
   <center>
@@ -545,5 +563,14 @@
   <factor-prop>/controls/gear/brake-parking</factor-prop>
  </emission>
 </animation>
+ <model>
+  <name>Pushback</name>
+  <path>Models/Airport/Pushback/Forklift.xml</path>
+  <offsets>
+   <x-m>-2.15299</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
 </PropertyList>
  
