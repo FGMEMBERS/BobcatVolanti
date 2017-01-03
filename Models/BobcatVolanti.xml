@@ -461,6 +461,8 @@
  <type>material</type>
   <object-name>Lights</object-name>
   <object-name>Steering L1</object-name>
+  <object-name>Accelerator</object-name>
+  <object-name>Decelerator</object-name>
 <condition>
 <greater-than>
             <property>/sim/time/sun-angle-rad</property>
@@ -563,6 +565,41 @@
   <factor-prop>/controls/gear/brake-parking</factor-prop>
  </emission>
 </animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>Accelerator</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>true</repeatable>
+  <binding>
+   <command>property-adjust</command>
+    <property>/controls/engines/engine/throttle</property>
+<step>-0.05</step>
+  <min>0</min>
+  <max>1</max>
+  <wrap>false</wrap>
+    </binding>
+  </action>
+ </animation>
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>Decelerator</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>true</repeatable>
+  <binding>
+   <command>property-adjust</command>
+    <property>/controls/engines/engine/throttle</property>
+<step>0.05</step>
+  <min>0</min>
+  <max>1</max>
+  <wrap>false</wrap>
+    </binding>
+  </action>
+ </animation>
+
  <model>
   <name>Pushback</name>
   <path>Models/Airport/Pushback/Forklift.xml</path>
